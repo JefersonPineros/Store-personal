@@ -1,0 +1,29 @@
+<ng-container *ngIf="!inputNumber; else numberInput">
+  <ng-container *ngIf="typeInput != 'password'; else inputPassword">
+    <input
+      type="{{ typeInput == 'string' || typeInput == 'text' ? 'text' : '' }}"
+      pInputText
+      placeholder="{{ placeHolder }}"
+      [(ngModel)]="textModel"
+      (ngModelChange)="textModelChange.emit($event)"
+      [disabled]="disabledInputText"
+    />
+  </ng-container>
+</ng-container>
+<ng-template #numberInput>
+  <p-inputNumber
+    [disabled]="disabledInputNumber"
+    placeholder="{{ placeHolderNumber }}"
+    [(ngModel)]="numberModel"
+    (ngModelChange)="numberModelChange.emit($event)"
+  ></p-inputNumber>
+</ng-template>
+
+<ng-template #inputPassword>
+  <p-password
+    class="{{clase}}"
+    [(ngModel)]="textModel"
+    placeholder="{{ placeHolder }}"
+    (ngModelChange)="textModelChange.emit($event)"
+  ></p-password>
+</ng-template>

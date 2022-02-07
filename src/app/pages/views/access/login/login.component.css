@@ -1,0 +1,27 @@
+.style-content-login {
+    border: solid 1px rgb(221, 218, 218);
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-bottom: 15;
+    font-size: 16px !important;
+    padding: 15px;
+}
+
+.image-style {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-margin {
+    margin-top: 60px;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.user-margin {
+    margin-top: 40px;
+}

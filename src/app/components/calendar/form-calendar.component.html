@@ -1,0 +1,7 @@
+<p-calendar 
+    [(ngModel)]="fechasCalendar" 
+    (ngModelChange)="fechaCalendarChange($event)"
+    dateFormat="yy-mm-dd"
+    placeholder="{{placeholder}}"
+    [touchUI]="touchUI">
+</p-calendar>

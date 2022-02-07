@@ -1,0 +1,17 @@
+<p-fileUpload
+  name="demo[]"
+  accept="application/vnd.ms-excel"
+  [customUpload]="true"
+  (uploadHandler)="onUpload($event)"
+  chooseLabel="Seleccionar"
+  uploadLabel="Cargar documento"
+  cancelLabel="Cancelar"
+>
+  <ng-template pTemplate="content">
+    <ul *ngIf="uploadedFiles.length">
+      <li *ngFor="let file of uploadedFiles">
+        {{ file.name }} - {{ file.size }} bytes
+      </li>
+    </ul>
+  </ng-template>
+</p-fileUpload>

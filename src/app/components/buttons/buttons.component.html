@@ -1,0 +1,11 @@
+<button 
+    pButton pRipple
+    type="{{ typeButton }}"
+    label="{{ nameButton }}" 
+    (click)="eventClick($event)"
+    [ngClass]="[
+        typeButton == 'btn-sinBorde'? 'p-button-text p-button-plain': '',
+        colorButton != ''? colorButton: ''
+    ]"
+    icon="{{ iconButton }}">
+</button>

@@ -1,0 +1,8 @@
+<p-card styleClass="{{classCard}}" [style]="{'background': colorCard}">
+    <ng-template pTemplate="header">
+        <ng-template [ngTemplateOutlet]="plantillaHeader" ></ng-template>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <ng-template [ngTemplateOutlet]="plantillaContent" ></ng-template>
+    </ng-template>
+</p-card>

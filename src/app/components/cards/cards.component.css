@@ -1,0 +1,7 @@
+[class*="color-card-"] {
+    background: red !important;
+}
+
+[class*="color-card-"] .p-component{
+    background: red !important;
+}

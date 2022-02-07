@@ -1,0 +1,48 @@
+<div class="p-grid">
+    <div class="p-col-4 p-offset-4 p-p-5 style-content-login">
+      <div class="p-col-12">
+        <img
+          src=""
+          class="image-style"
+          alt=""
+          style="width: 140px"
+        />
+      </div>
+      <div class="p-grid">
+        <div class="p-col-12">
+          <div class="p-fluid">
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+              <div class="p-field user-margin">
+                <label for="">Usuario:</label>
+                <app-input
+                  typeInput="string"
+                  placeHolder="Usuario"
+                  [(textModel)]="loginUser.userName"
+                  [grupoText]="formLogin"
+                >
+                </app-input>
+              </div>
+              <div class="p-field">
+                <label for="">Contraseña:</label>
+                <app-input
+                  typeInput="password"
+                  [(textModel)]="loginUser.passWord"
+                  [inputNumber]="false"
+                  placeHolder="Contraseña"
+                  [grupoText]="formLogin"
+                ></app-input>
+              </div>
+              <div class="btn-margin">
+                  <app-buttons
+                    typeButton="submit"
+                    nameButton="Ingresar"
+                  ></app-buttons>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p-toast position="top-right"></p-toast>
+  

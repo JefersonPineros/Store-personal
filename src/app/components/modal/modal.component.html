@@ -1,0 +1,16 @@
+<p-dialog 
+    header="Acciones genericas:"
+    [(visible)]="display" 
+    (onHide)="modalCerrado.emit($event)"
+    [blockScroll]="true"
+    [autoZIndex]="true"
+    [style]="{'margin':'80px', 'overflow':'scroll', 'width': '50vw'}"
+    [contentStyle]="{'overflow': 'visible'}">
+    <ng-template pTemplate="header">
+        <ng-template [ngTemplateOutlet]="plantillaHeader" ></ng-template>
+    </ng-template>
+        <ng-template [ngTemplateOutlet]="plantillaContent"></ng-template>
+    <p-footer>
+        <ng-template [ngTemplateOutlet]="plantillaFooter"></ng-template>
+    </p-footer>
+</p-dialog>
